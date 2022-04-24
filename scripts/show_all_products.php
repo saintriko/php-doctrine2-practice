@@ -1,6 +1,6 @@
 <?php
 // show_product.php <id>
-require_once "bootstrap.php";
+require_once "../bootstrap.php";
 
 $productRepository = $entityManager->getRepository('Product');
 $products = $productRepository->findAll();
@@ -10,6 +10,6 @@ if ($products === null) {
     exit(1);
 } else {
     foreach ($products as $product) {
-        echo sprintf("-%s\n", $product->getName());
+        echo $product->getId() . " " . $product->getName() . " " . $product->getModel() . "\n";
     }
 }

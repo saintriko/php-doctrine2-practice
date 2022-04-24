@@ -22,7 +22,7 @@ class Product
     /**
      * @ORM\Column(type="string")
      */
-    protected $surname;
+    protected $model;
 
     public function getId()
     {
@@ -39,13 +39,13 @@ class Product
         $this->name = $name;
     }
 
-    public function setSurname($surname)
+    public function setModel($model)
     {
-        $this->surname = $surname;
+        $this->model = $model;
     }
 
-    public function getSurname()
+    public function getModel()
     {
-        return $this->surname;
+        return $this->model;
     }
 }
